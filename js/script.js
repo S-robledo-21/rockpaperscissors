@@ -3,7 +3,7 @@ let computerChoice;
 let userChoice;
 $(".play").click(function(){
   let userChoice = $(".input").val();
-//  if (!userChoice === "rock" || !userChoice === "paper" || !userChoice === "scissors"){}
+//if (!(userChoice === "rock") || !(userChoice === "paper") || !(userChoice === "scissors")){}
   randomNumber = (Math.random() * 3);
   
 if (randomNumber<1)
@@ -52,4 +52,12 @@ else {computerChoice = "scissors";}
     if (userChoice === "paper" && computerChoice === "scissors") {
   $(".result").text("scissors wins");
                                                                  }
-}
+  
+  
+   if (userChoice  !=="rock" && userChoice !=="paper" && userChoice !=="scissors") {
+  $(".result").text("Invalid Input");
+     }
+  
+  
+  
+});
